@@ -1,0 +1,4 @@
+SELECT COUNT(*), status FROM user GROUP BY status;
+SELECT COUNT(*), status FROM user GROUP BY status HAVING status="Offline";
+SELECT * FROM user JOIN login_history ON user.userid=login_history.user_id;
+SELECT u1.userid,l1.time,u1.first_name FROM user as u1 JOIN login_history as l1 ON u1.userid=l1.user_id;
